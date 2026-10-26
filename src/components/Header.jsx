@@ -38,6 +38,11 @@ export function Header() {
                 </Link>
               </li>
               <li>
+                <Link to="/usluge" onClick={() => setOtvoren(false)}>
+                  Usluge
+                </Link>
+              </li>
+              <li>
                 <Link to="/kontakt" onClick={() => setOtvoren(false)}>
                   Kontakt
                 </Link>

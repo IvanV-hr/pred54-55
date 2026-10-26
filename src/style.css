@@ -171,7 +171,8 @@ header {
   object-fit: cover;
 }
 
-.hero::after {
+.hero::after,
+.detalji-slika::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -360,4 +361,114 @@ footer {
   .footer-wrapper {
     flex-direction: column;
   }
+}
+
+.kartica-usluga {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.kartica-slika {
+  height: 190px;
+}
+
+.kartica-slika,
+.slika-usluge {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.kartica-usluga .kartica-sadrzaj {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 22px;
+}
+
+.kartica-usluga .oznaka {
+  background: var(--rub);
+  align-self: flex-start;
+  padding: 4px 10px;
+  border-radius: 16px;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.kartica-usluga h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.cijena-kartica {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.oznaka,
+.cijena-usluge,
+.cijena-kartica {
+  color: var(--tamna);
+  font-weight: bold;
+}
+
+.kartica-usluga .gumb {
+  width: 100%;
+  text-align: center;
+  margin-top: auto;
+}
+
+.detalji-usluge {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid var(--rub);
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--bijela);
+  box-shadow: var(--box-shadow);
+}
+
+.detalji-slika {
+  flex: 1 1 350px;
+  display: flex;
+  position: relative;
+}
+
+.detalji-sadrzaj {
+  flex: 1 1 300px;
+  padding: 20px;
+}
+
+.detalji-sadrzaj h2 {
+  margin-bottom: 10px;
+}
+
+.slika-usluge {
+  aspect-ratio: 4 / 3;
+}
+
+.cijena-usluge {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.detalji-sadrzaj .actions .gumb {
+  flex: 1;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.gumb-povratak {
+  background: var(--bijela);
+  color: var(--tamna);
+}
+
+.gumb-povratak:hover {
+  color: var(--bijela);
+  background: var(--tamna-hover);
 }

@@ -1,6 +1,6 @@
 import { Link } from "react-router";
-import KarticaKategorije from "../components/KarticaKategorije";
-import { kategorije } from "../konstante";
+import { kategorije } from "../konstante/constants";
+import Kartica from "../components/Kartica";
 
 const Naslovnica = () => {
   return (
@@ -12,12 +12,15 @@ const Naslovnica = () => {
       </p>
       <div className="kartice">
         {kategorije.map((kategorija) => (
-          <KarticaKategorije key={kategorija.naslov} kategorija={kategorija} />
+          <Kartica key={kategorija.naslov} podatci={kategorija} />
         ))}
       </div>
       <div className="actions">
         <Link className="gumb" to="/kontakt">
           Pošalji upit
+        </Link>
+        <Link className="gumb" to="/usluge">
+          Pogledajte usluge
         </Link>
       </div>
     </section>

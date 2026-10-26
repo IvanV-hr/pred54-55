@@ -13,6 +13,9 @@ export function Footer() {
               <Link to="/">Naslovnica</Link>
             </li>
             <li>
+              <Link to="/usluge">Usluge</Link>
+            </li>
+            <li>
               <Link to="/kontakt">Kontakt</Link>
             </li>
           </ul>
