@@ -378,7 +378,8 @@ footer {
 }
 
 .kartica-slika,
-.slika-usluge {
+.slika-usluge,
+.slika-404 {
   display: block;
   width: 100%;
   object-fit: cover;
@@ -423,7 +424,8 @@ footer {
   margin-top: auto;
 }
 
-.detalji-usluge {
+.detalji-usluge,
+.stranica-404 {
   display: flex;
   flex-wrap: wrap;
   border: 1px solid var(--rub);
@@ -471,4 +473,20 @@ footer {
 .gumb-povratak:hover {
   color: var(--bijela);
   background: var(--tamna-hover);
+}
+
+.tekst-404 {
+  flex: 1 1 250px;
+}
+
+.slika-404 {
+  flex: 1 1 250px;
+  width: 45%;
+  border-radius: 16px;
+}
+
+.stranica-404 {
+  padding: 20px;
+  align-items: center;
+  gap: 20px;
 }
