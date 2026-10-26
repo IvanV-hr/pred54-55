@@ -3,15 +3,15 @@ import slikaKocnica from "../assets/kocnice.jpg";
 import slikaDijagnostike from "../assets/dijagnostika.jpg";
 
 export const kategorije = [
-    {
-      naslov: "Mali servis",
-      opis: "Zamjena ulja i filtera te pregled osnovnmih dijelova vozila.",
-    },
-    { naslov: "Kočnice", opis: "Provjera i zamjena pločica i diskova." },
-    {
-      naslov: "Dijagnostika",
-      opis: "Očitavanje grešaka i pronalazak uzroka problema na vozilu.",
-    },
+  {
+    naslov: "Mali servis",
+    opis: "Zamjena ulja i filtera te pregled osnovnmih dijelova vozila.",
+  },
+  { naslov: "Kočnice", opis: "Provjera i zamjena pločica i diskova." },
+  {
+    naslov: "Dijagnostika",
+    opis: "Očitavanje grešaka i pronalazak uzroka problema na vozilu.",
+  },
 ];
 
 export const usluge = [
