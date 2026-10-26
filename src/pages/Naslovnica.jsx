@@ -1,19 +1,8 @@
 import { Link } from "react-router";
 import KarticaKategorije from "../components/KarticaKategorije";
+import { kategorije } from "../konstante";
 
 const Naslovnica = () => {
-  const kategorije = [
-    {
-      naslov: "Mali servis",
-      opis: "Zamjena ulja i filtera te pregled osnovnmih dijelova vozila.",
-    },
-    { naslov: "Kočnice", opis: "Provjera i zamjena pločica i diskova." },
-    {
-      naslov: "Dijagnostika",
-      opis: "Očitavanje grešaka i pronalazak uzroka problema na vozilu.",
-    },
-  ];
-
   return (
     <section className="section">
       <h2>Usluge našeg autoservisa</h2>
