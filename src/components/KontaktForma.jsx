@@ -1,13 +1,15 @@
 import { useState } from "react";
 import { Button } from "./Button";
+import { useNavigate } from "react-router";
 
 const KontaktForma = () => {
+  const navigate = useNavigate();
+
   const [podatci, setPodatci] = useState({
     ime: "",
     email: "",
     poruka: "",
     greska: "",
-    poslano: false,
   });
 
   function promijeniPodatke(e) {
@@ -15,7 +17,6 @@ const KontaktForma = () => {
       ...podatci,
       [e.target.name]: e.target.value?.trim(),
       greska: "",
-      poslano: false,
     });
   }
 
@@ -26,7 +27,6 @@ const KontaktForma = () => {
       setPodatci({
         ...podatci,
         greska: "Upišite valjano ime. Ime mora imati barem 2 slova.",
-        poslano: false,
       });
 
       return;
@@ -36,7 +36,6 @@ const KontaktForma = () => {
       setPodatci({
         ...podatci,
         greska: "Upišite valjani email.",
-        poslano: false,
       });
 
       return;
@@ -46,13 +45,12 @@ const KontaktForma = () => {
       setPodatci({
         ...podatci,
         greska: "Upišite valjanu poruka. Poruka mora imati barem 10 znakova.",
-        poslano: false,
       });
 
       return;
     }
 
-    setPodatci({ ...podatci, greska: "", poslano: true });
+    navigate("/potvrda", { state: { ime: podatci.ime.trim() } });
   }
 
   return (
@@ -82,9 +80,6 @@ const KontaktForma = () => {
         onChange={promijeniPodatke}
       ></textarea>
       {podatci.greska && <p className="greska">{podatci.greska}</p>}
-      {podatci.poslano && (
-        <p className="poslano">Poruka je zabilježena. Hvala na javljanju.</p>
-      )}
       <Button type="Submit">Pošaljite poruku</Button>
     </form>
   );

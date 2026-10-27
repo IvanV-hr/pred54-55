@@ -392,13 +392,15 @@ footer {
   padding: 22px;
 }
 
-.kartica-usluga .oznaka {
+.kartica-usluga .oznaka,
+.kontakt .oznaka {
   background: var(--rub);
   align-self: flex-start;
   padding: 4px 10px;
   border-radius: 16px;
   font-size: 0.9rem;
   margin-bottom: 5px;
+  display: inline-block;
 }
 
 .kartica-usluga h3 {
@@ -489,4 +491,111 @@ footer {
   padding: 20px;
   align-items: center;
   gap: 20px;
+  margin-top: 0.5rem;
+}
+
+.header-linkovi a.active,
+.footer-linkovi a.active {
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.not-found-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.potvrda-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.potvrda {
+  padding: 20px;
+  background: var(--bijela);
+  box-shadow: var(--box-shadow);
+  border-radius: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 550px;
+}
+
+.potvrda-oznaka {
+  display: inline-flex;
+  padding: 20px;
+  background: var(--tamna);
+  color: var(--bijela);
+  font-weight: bold;
+  border-radius: 50%;
+}
+
+.potvrda h1 {
+  margin-bottom: 5px;
+  line-height: 1.2;
+  font-size: 1.8rem;
+  max-width: 300px;
+  text-align: center;
+}
+
+.potvrda .gumb {
+  align-self: center;
+}
+
+.kontakt {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+  background: var(--bijela);
+  padding: 1rem;
+  border-radius: 16px;
+  box-shadow: var(--box-shadow);
+  border: 1px solid var(--rub);
+}
+
+.kontakt-text {
+  flex: 1 1 400px;
+}
+
+.kontakt-text h2 {
+  margin: 10px 0;
+  line-height: 1.2;
+}
+
+.kontakt-box {
+  flex: 1 1 250px;
+  background: var(--tamna);
+  color: var(--bijela);
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.kontakt-box .gumb {
+  display: block;
+  background: var(--bijela);
+  color: var(--tamna);
+  text-align: center;
+  font-weight: bold;
+}
+
+.kontakt-box .gumb:hover {
+  background: var(--rub);
+}
+
+.kontakt-box .gumb:focus-visible {
+  outline: 2px solid var(--bijela);
+  outline-offset: 2px;
+}
+
+@media (max-width: 599px) {
+  .kontakt {
+    gap: 15px;
+  }
 }

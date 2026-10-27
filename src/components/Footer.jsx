@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 
 export function Footer() {
   return (
@@ -10,13 +10,16 @@ export function Footer() {
         <nav aria-label="Navigacija u podnozju">
           <ul className="footer-linkovi">
             <li>
-              <Link to="/">Naslovnica</Link>
+              <NavLink to="/">Naslovnica</NavLink>
             </li>
             <li>
-              <Link to="/usluge">Usluge</Link>
+              <NavLink to="/usluge">Usluge</NavLink>
             </li>
             <li>
-              <Link to="/kontakt">Kontakt</Link>
+              <NavLink to="/o-nama">O nama</NavLink>
+            </li>
+            <li>
+              <NavLink to="/kontakt">Kontakt</NavLink>
             </li>
           </ul>
         </nav>

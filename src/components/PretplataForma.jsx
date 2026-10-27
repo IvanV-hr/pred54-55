@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { Button } from "./Button";
+import { useNavigate } from "react-router";
 
 const PretplataForma = () => {
+  const navigate = useNavigate();
+
   const [podatci, setPodatci] = useState({
     email: "",
     privola: false,
@@ -30,11 +33,7 @@ const PretplataForma = () => {
       return;
     }
 
-    setPodatci({
-      email: "",
-      privola: false,
-      obavijest: `Prijava za email ${podatci.email} je zabilježena.`,
-    });
+    navigate("/novosti/potvrda", { state: { email: podatci.email.trim() } });
   }
 
   return (

@@ -7,22 +7,31 @@ import { Route, Routes } from "react-router";
 import Usluge from "./pages/Usluge.jsx";
 import DetaljiUsluge from "./pages/DetaljiUsluge.jsx";
 import NotFound from "./pages/NotFound.jsx";
+import Layout from "./layouts/layout.jsx";
+import NotFoundLayout from "./layouts/NotFoundLayout.jsx";
+import PotvrdaLayout from "./layouts/PotvrdaLayout.jsx";
+import Potvrda from "./pages/Potvrda.jsx";
+import ONama from "./pages/ONama.jsx";
 
 export default function App() {
   return (
     <>
-      <Header />
-      <HeroSekcija />
-      <main id="glavni-sadrzaj">
-        <Routes>
+      <Routes>
+        <Route element={<Layout />}>
           <Route path="/" element={<Naslovnica />} />
           <Route path="/kontakt" element={<Kontakt />} />
           <Route path="/usluge" element={<Usluge />} />
           <Route path="/usluge/:id" element={<DetaljiUsluge />} />
+          <Route path="/o-nama" element={<ONama />} />
+        </Route>
+        <Route element={<NotFoundLayout />}>
           <Route path="*" element={<NotFound />} />
-        </Routes>
-      </main>
-      <Footer />
+        </Route>
+        <Route element={<PotvrdaLayout />}>
+          <Route path="/potvrda" element={<Potvrda />} />
+          <Route path="/novosti/potvrda" element={<Potvrda />} />
+        </Route>
+      </Routes>
     </>
   );
 }

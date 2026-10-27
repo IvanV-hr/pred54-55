@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "./Button.jsx";
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 
 export function Header() {
   const [otvoren, setOtvoren] = useState(false);
@@ -33,19 +33,24 @@ export function Header() {
           >
             <ul className="header-linkovi">
               <li>
-                <Link to="/" onClick={() => setOtvoren(false)}>
+                <NavLink to="/" onClick={() => setOtvoren(false)}>
                   Naslovnica
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link to="/usluge" onClick={() => setOtvoren(false)}>
+                <NavLink to="/usluge" onClick={() => setOtvoren(false)}>
                   Usluge
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link to="/kontakt" onClick={() => setOtvoren(false)}>
+                <NavLink to="/o-nama" onClick={() => setOtvoren(false)}>
+                  O nama
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/kontakt" onClick={() => setOtvoren(false)}>
                   Kontakt
-                </Link>
+                </NavLink>
               </li>
             </ul>
           </nav>
