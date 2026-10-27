@@ -43,3 +43,18 @@ export const usluge = [
     opis: "Očitavanje zabilježenih grešaka i provjera mogućeg uzroka problema na vozilu.",
   },
 ];
+
+export const nacinRada = [
+  {
+    naslov: "Najprije razgovor",
+    opis: "Slušamo što ste primijetili na vozilu i dogovaramo prvi pregled.",
+  },
+  {
+    naslov: "Jasan dogovor",
+    opis: "Objašnjavamo predložene radove i okvirnu cijenu prije početka servisa.",
+  },
+  {
+    naslov: "Provjera nakon servisa",
+    opis: "Prolazimo obavljene radove i preporuke za daljnje održavanje.",
+  },
+];
