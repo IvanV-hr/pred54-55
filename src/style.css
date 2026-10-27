@@ -599,3 +599,44 @@ footer {
     gap: 15px;
   }
 }
+
+.o-nama-uvod {
+  box-shadow: var(--box-shadow);
+  background: var(--bijela);
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.o-nama-uvod p {
+  max-width: 700px;
+}
+
+.o-nama-uvod .kartice {
+  margin-top: 30px;
+}
+
+.kartica-pristup {
+  border: none;
+  background: linear-gradient(90deg, var(--bijela), var(--tamna));
+  box-shadow: var(--box-shadow);
+}
+
+.kartica-pristup h3 {
+  color: var(--tamna);
+}
+
+.kartica-img {
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.kartica-img img {
+  height: 250px;
+}
+
+.kartica-img p {
+  padding: 10px;
+  margin: 0;
+}
