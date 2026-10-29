@@ -61,13 +61,15 @@ const Admin = () => {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          email: email
-        })
+          email: email,
+        }),
       });
-        setZaposlenici((zaposlenici) =>
-          zaposlenici.map((zaposlenik) => zaposlenik.id === id ? {...zaposlenik, email} : zaposlenik),
-        );
-        return zaposlenik
+      setZaposlenici((zaposlenici) =>
+        zaposlenici.map((zaposlenik) =>
+          zaposlenik.id === id ? { ...zaposlenik, email } : zaposlenik,
+        ),
+      );
+      return zaposlenik;
     } catch {
       setGreska(
         "Došlo je do greške orikom promjene e-mail adrese. Pokušajte ponovo.",

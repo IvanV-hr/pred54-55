@@ -1,10 +1,10 @@
 import { Button } from "./Button";
 
 const AdminModal = ({ vrstaPodatka, onZatvori, detalji, onPromjeniEmail }) => {
-function promjeniEmail() {
-        const email = window.prompt("Unesite novi email", detalji.email)
-        if(email) onPromjeniEmail(email.trim())
-    }
+  function promjeniEmail() {
+    const email = window.prompt("Unesite novi email", detalji.email);
+    if (email) onPromjeniEmail(email.trim());
+  }
 
   return (
     <div className="modal-overlay" onClick={onZatvori}>

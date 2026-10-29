@@ -8,7 +8,7 @@ const AdminPanel = ({
   podatci,
   onObrisi,
   onPrikazDetalja,
-  onPromjeniEmail
+  onPromjeniEmail,
 }) => {
   const [detalji, setDetalji] = useState(null);
 
