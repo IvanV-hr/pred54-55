@@ -52,6 +52,11 @@ export function Header() {
                   Kontakt
                 </NavLink>
               </li>
+              <li>
+                <NavLink to="/admin" onClick={() => setOtvoren(false)}>
+                  Admin
+                </NavLink>
+              </li>
             </ul>
           </nav>
         </div>

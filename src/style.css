@@ -640,3 +640,87 @@ footer {
   padding: 10px;
   margin: 0;
 }
+
+.admin-paneli {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.admin-panel {
+  flex: 1 1 350px;
+  background: var(--bijela);
+  box-shadow: var(--box-shadow);
+  border-radius: 16px;
+  border: 1px solid var(--rub);
+  padding: 20px;
+}
+
+.admin-zaglavlje,
+.admin-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.admin-zaglavlje {
+  justify-content: space-between;
+}
+
+.admin-zaglavlje h2 {
+  margin: 0;
+}
+
+.admin-broj {
+  padding: 5px 10px;
+  background: var(--svijetla);
+  border-radius: 50px;
+}
+
+.admin-lista {
+  list-style: none;
+  max-height: 600px;
+  overflow-y: auto;
+  padding: 0;
+  margin: 0;
+}
+
+.admin-podatak {
+  border-bottom: 1px solid var(--tamna);
+  padding: 15px 0;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(240, 240, 248, 0.5);
+}
+
+.modal {
+  background: var(--bijela);
+  box-shadow: var(--box-shadow);
+  border-radius: 16px;
+  border: 1px solid var(--rub);
+  padding: 20px;
+}
+
+.modal-zaglavlje {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--tamna);
+  gap: 20px;
+  padding: 5px 0;
+}
+
+.modal-zaglavlje h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.modal-sadrzaj {
+  margin-top: 20px;
+}

@@ -21,6 +21,9 @@ export function Footer() {
             <li>
               <NavLink to="/kontakt">Kontakt</NavLink>
             </li>
+            <li>
+              <NavLink to="/admin">Admin</NavLink>
+            </li>
           </ul>
         </nav>
       </div>
